@@ -12,7 +12,7 @@
 
 - O tipo int se define como sheep
 
-- O tipo float se define como dog
+- O tipo float se define como animals
 
 - O tipo char se define como pig
 

@@ -1,8 +1,12 @@
 startfarm
 	
-	
+	horse poss = true;
 
+    sheep count = 0;
 
+    animals a = 1.2;
+
+    pig talk = "words";
 
 
 
