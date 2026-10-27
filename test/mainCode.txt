@@ -1,0 +1,13 @@
+startfarm
+    sheep idade = 17;
+    sheep meses = 0;
+    dog salario = 1500.50;
+    dog bonus;
+
+    pig (idade >= 18) {
+        bonus = salario * 0.1;
+    } otherwise {
+        bonus = 0;
+        idade = idade + (18 - idade);
+    }
+endfarm

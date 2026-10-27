@@ -1,0 +1,14 @@
+// Erro: tem dois if no programa
+startfarm
+    sheep x = 5;
+
+    pig (x > 2) {
+        x = 0;
+    } otherwise {
+        x = 1;
+    }
+
+    pig (x == 0) {
+        x = 10;
+    }
+endfarm

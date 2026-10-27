@@ -1,0 +1,10 @@
+// Erro: falta ; no fim da linha 4
+startfarm
+    sheep x = 5;
+    dog y = 2.5
+    sheep z;
+
+    pig (x > 2) {
+        z = x;
+    }
+endfarm

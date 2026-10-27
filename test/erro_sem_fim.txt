@@ -1,0 +1,9 @@
+// Erro: faltou o fim
+startfarm
+    dog nota = 7.5;
+
+    pig (nota >= 6) {
+        nota = 10;
+    } otherwise {
+        nota = 0;
+    }

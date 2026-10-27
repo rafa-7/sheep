@@ -1,0 +1,7 @@
+// Erro: não começa com inicio
+    sheep x = 5;
+
+    pig (x > 2) {
+        x = 0;
+    }
+endfarm

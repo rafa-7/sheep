@@ -1,0 +1,8 @@
+// Erro: declarou variável dentro do if
+startfarm
+    sheep x = 5;
+
+    pig (x > 2) {
+        sheep y = 3;
+    }
+endfarm

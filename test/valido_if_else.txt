@@ -1,0 +1,12 @@
+// Bloco completo if e else válido
+startfarm
+    sheep a = 10;
+    sheep b;
+    dog media = (a + 5) / 2.0;
+
+    pig (a != b) {
+        media = -media * 2;
+    } otherwise {
+        b = a;
+    }
+endfarm

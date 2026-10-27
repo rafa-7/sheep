@@ -1,0 +1,7 @@
+// Válido: sem else e com o bloco do if vazio
+startfarm
+    sheep idade = 20;
+
+    pig (idade < 18) {
+    }
+endfarm

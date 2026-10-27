@@ -1,0 +1,8 @@
+// Erro léxico: nome de variável começando com número
+startfarm
+    sheep 2idade = 20;
+
+    pig (2idade > 18) {
+        2idade = 0;
+    }
+endfarm

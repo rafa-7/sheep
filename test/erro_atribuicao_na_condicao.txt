@@ -1,0 +1,8 @@
+// Erro: usou = no lugar de == no if
+startfarm
+    sheep x = 5;
+
+    pig (x = 5) {
+        x = 0;
+    }
+endfarm

@@ -1,0 +1,8 @@
+// Erro léxico: @ não existe em Sheep
+startfarm
+    sheep x = 5;
+
+    pig (x > 2) {
+        x = x @ 2;
+    }
+endfarm

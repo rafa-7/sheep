@@ -1,0 +1,10 @@
+// Erro: esqueceu de fechar o bloco do if antes do else
+startfarm
+    sheep x = 5;
+
+    pig (x > 2) {
+        x = 0;
+    otherwise {
+        x = 1;
+    }
+endfarm
