@@ -1,0 +1,16 @@
+startfarm
+    sheep inteiro = 1;
+    sheep temp;
+    dog double = 1.2;
+
+    pig(inteiro > 0) 
+    {
+        temp = 2;
+    } donkey (double < 2) {
+        commandment(double <= 1.0) {}
+    }
+    horse {
+        // Comentário
+    }
+
+endfarm

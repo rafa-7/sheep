@@ -1,8 +1,0 @@
-// Erro léxico: nome de variável com acento
-startfarm
-    dog salário = 1500.50;
-
-    pig (salário > 1000) {
-        salário = 0;
-    }
-endfarm

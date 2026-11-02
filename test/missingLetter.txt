@@ -1,0 +1,4 @@
+startfarm
+    sheep inteiro = 1;
+    dg wrong = 1.2;
+endfarm
