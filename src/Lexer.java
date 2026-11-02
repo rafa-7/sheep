@@ -27,7 +27,9 @@ public class Lexer {
         palavrasReservadas.put("sheep", TokenType.INT);
         palavrasReservadas.put("dog", TokenType.DOUBLE);
         palavrasReservadas.put("pig", TokenType.IF);
-        palavrasReservadas.put("otherwise", TokenType.ELSE);
+        palavrasReservadas.put("horse", TokenType.ELSE);
+        palavrasReservadas.put("donkey", TokenType.ELSEIF);
+        palavrasReservadas.put("commandment", TokenType.WHILE);
     }
 
     public List<Token> scanTokens() {

@@ -51,6 +51,12 @@ public class Parser {
         matchExact(TokenType.RPAREN, "esperado ')' para fechar a condição do 'pig'");
         parseBloco("if");
 
+        // O elseif é opcional
+        if (match(TokenType.ELSEIF))
+        {
+            parseBloco("elseif");
+        }
+
         // O else é opcional (apenas "espia" se existe)
         if (match(TokenType.ELSE)) {
             parseBloco("else");
@@ -76,11 +82,11 @@ public class Parser {
         if (check(TokenType.ID)) {
             parseAtribuicao();
         } else if (check(TokenType.INT) || check(TokenType.DOUBLE)) {
-            throw erro("variável só pode ser declarada antes do if");
+            throw erro("Variáveis podem ser declarada apenas antes do if");
         } else if (check(TokenType.IF)) {
-            throw erro("não pode ter outro if dentro do bloco");
+            throw erro("Não é possível ter outro if dentro do bloco, apenas um elseif ou else");
         } else {
-            throw erro("esperado um comando (atribuição)");
+            throw erro("Esperado um comando (atribuição)");
         }
     }
 
