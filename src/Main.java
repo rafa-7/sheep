@@ -2,13 +2,35 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Se não passar nenhum arquivo, usa o codigo.txt
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Qual arquivo deseja selecionar?");
+        System.out.println("(1) final.txt - Todos os componentes (funciona)");
+        System.out.println("(2) missingBracket.txt - Componente sem chaves (não funciona)");
+        System.out.println("(3) missingLetter.txt - Componente com uma letra faltando (não funciona)");
+        System.out.println("(4) missingParenthesis.txt - Componente com um parênteses faltando (não funciona)");
+        System.out.println("(0) Sair");
+
+        String path = new String();
+        int escolha = scanner.nextInt();
+
+        switch (escolha)
+        {
+            case 1: path = "../test/final.txt"; break;
+            case 2: path = "../test/missingBracket.txt"; break;
+            case 3: path = "../test/missingLetter.txt"; break;
+            case 4: path = "../test/missingParenthesis.txt"; break;
+            case 0: path = ""; break;
+            default: System.out.println("Digite uma escolha válida");
+        }
+
         if (args.length == 0) {
-            analisarArquivo("codigo.txt");
+            analisarArquivo(path);
         } else {
             for (String arquivo : args) {
                 analisarArquivo(arquivo);

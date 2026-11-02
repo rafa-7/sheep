@@ -51,9 +51,12 @@ public class Parser {
         matchExact(TokenType.RPAREN, "esperado ')' para fechar a condição do 'pig'");
         parseBloco("if");
 
-        // O elseif é opcional
-        if (match(TokenType.ELSEIF))
+        // Quantidade ilimitada de elseif's
+        while(match(TokenType.ELSEIF))
         {
+            matchExact(TokenType.LPAREN, "esperado '(' depois de 'donkey'");
+            parseComparacao();
+            matchExact(TokenType.RPAREN, "esperado ')' para fechar a condição de 'donkey'");
             parseBloco("elseif");
         }
 
@@ -69,6 +72,7 @@ public class Parser {
         matchExact(TokenType.LPAREN, "Esperado '(' depois de 'commandment'");
         parseComparacao();
         matchExact(TokenType.RPAREN, "Esperado ')' para fechar a condição do 'commandment'");
+        parseBloco("commandment");
     }
 
     // { comandos }
@@ -78,7 +82,8 @@ public class Parser {
         // Lê os comandos até achar o '}'. Se aparecer else, fim ou o arquivo acabar,
         // é porque esqueceram de fechar o bloco
         while (!check(TokenType.RBRACE) && !check(TokenType.ELSE)
-                && !check(TokenType.FIM) && !check(TokenType.EOF)) {
+                && !check(TokenType.FIM) && !check(TokenType.EOF)
+            && (!check(TokenType.ELSEIF))) {
             parseComando();
         }
 
@@ -110,10 +115,10 @@ public class Parser {
     private void parseComparacao() {
         parseExpressao();
 
-        TokenType op = peek().getType();
-        if (op == TokenType.EQUAL_EQUAL || op == TokenType.NOT_EQUAL
-                || op == TokenType.LESS || op == TokenType.GREATER
-                || op == TokenType.LESS_EQUAL || op == TokenType.GREATER_EQUAL) {
+        TokenType operacao = peek().getType();
+        if (operacao == TokenType.EQUAL_EQUAL || operacao == TokenType.NOT_EQUAL
+                || operacao == TokenType.LESS || operacao == TokenType.GREATER
+                || operacao == TokenType.LESS_EQUAL || operacao == TokenType.GREATER_EQUAL) {
             advance();
         } else {
             throw erro("esperado um operador relacional (==, !=, <, >, <=, >=)");

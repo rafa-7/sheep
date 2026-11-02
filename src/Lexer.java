@@ -217,11 +217,14 @@ public class Lexer {
         return current >= source.length();
     }
 
+    // Pega o número pelo código ASCII
+    // e retorna o resultado da comparação
     private boolean isDigito(char c) {
         return c >= '0' && c <= '9';
     }
 
     // Letra sem acento ou _
+    // Compara o código ASCII e compara
     private boolean isLetra(char c) {
         return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '_';
     }

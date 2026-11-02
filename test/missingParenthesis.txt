@@ -1,0 +1,7 @@
+startfarm
+    sheep inteiro = 1;
+    sheep temp;
+    dog double = 1.2;
+    pig(inteiro > 0 
+    {}
+endfarm
