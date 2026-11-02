@@ -2,7 +2,7 @@
 public enum TokenType {
 
     // Palavras reservadas
-    INICIO, FIM, INT, DOUBLE, IF, ELSE,
+    INICIO, FIM, INT, DOUBLE, IF, ELSE, WHILE,
 
     // Nome de variável e número
     ID, NUMBER,
