@@ -63,6 +63,14 @@ public class Parser {
         }
     }
 
+    private void parseWhile()
+    {
+        matchExact(TokenType.WHILE, "Esperado 'commandment'");
+        matchExact(TokenType.LPAREN, "Esperado '(' depois de 'commandment'");
+        parseComparacao();
+        matchExact(TokenType.RPAREN, "Esperado ')' para fechar a condição do 'commandment'");
+    }
+
     // { comandos }
     private void parseBloco(String nomeDoBloco) {
         matchExact(TokenType.LBRACE, "esperado '{' para abrir o bloco do '" + nomeDoBloco + "'");
