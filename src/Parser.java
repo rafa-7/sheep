@@ -27,9 +27,6 @@ public class Parser {
         }
         parsePigs();
 
-        if (check(TokenType.IF)) {
-            throw erro("o programa só pode ter um bloco pig-otherwise");
-        }
         matchExact(TokenType.FIM, "esperado 'fim' depois do bloco if-else");
         matchExact(TokenType.EOF, "não pode ter nada depois de 'endfarm'");
     }
