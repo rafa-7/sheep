@@ -98,6 +98,8 @@ public class Parser {
             throw erro("Variáveis podem ser declarada apenas antes do if");
         } else if (check(TokenType.IF)) {
             throw erro("Não é possível ter outro if dentro do bloco, apenas um elseif ou else");
+        } else if (check(TokenType.WHILE)) {
+            parseWhile();
         } else {
             throw erro("Esperado um comando (atribuição)");
         }

@@ -18,7 +18,7 @@ public class Main {
 
         String path = new String();
         int escolha = scanner.nextInt();
-
+        scanner.close();
         switch (escolha)
         {
             case 1: path = "../test/final.txt"; break;
